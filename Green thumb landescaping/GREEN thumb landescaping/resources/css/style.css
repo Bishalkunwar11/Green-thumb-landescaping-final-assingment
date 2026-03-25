@@ -673,6 +673,69 @@ footer {
   -o-transition: color 0.2s;
 }
 
+/* ---------------------------------- */
+/* BACK TO TOP BUTTON                  */
+/* ---------------------------------- */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--clr-2);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120%;
+  border: none;
+  text-decoration: none;
+  border-bottom: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, background-color 0.2s;
+  z-index: 9000;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover,
+.back-to-top:active {
+  background-color: var(--clr-1);
+  border-bottom: none;
+  color: #fff;
+}
+
+/* ---------------------------------- */
+/* ACCESSIBILITY FOCUS STYLES          */
+/* ---------------------------------- */
+
+*:focus-visible {
+  outline: 3px solid var(--clr-1);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------- */
+/* CONTACT SECTION INTRO               */
+/* ---------------------------------- */
+
+.section-form-intro {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 95%;
+}
+
+.section-form-intro a:link,
+.section-form-intro a:visited {
+  color: var(--clr-1);
+  font-weight: 700;
+}
+
 /* official site colors */
 .facebook-icon:hover {
   color: #1877f2;
@@ -706,16 +769,14 @@ footer p {
 
 .js--wp-3 {
   animation-delay: 500ms;
-
   animation-duration: 1s;
 }
 
 .js--wp-4 {
   animation-delay: 1s;
-
   animation-duration: 1s;
 }
 
-.js--wp-1.animated {
+.js--wp-1.animate__animated {
   opacity: 1;
 }
