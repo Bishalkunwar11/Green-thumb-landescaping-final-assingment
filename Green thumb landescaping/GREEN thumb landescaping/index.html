@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Yard and mowing services for Your Neighborhood"
+      content="Green Thumb Landscaping – licensed, insured and bonded yard and mowing services for your neighborhood. Flexible scheduling, tree services, and eco-friendly care."
+    />
+    <meta
+      name="keywords"
+      content="landscaping, lawn care, mowing, yard services, tree trimming, shrub trimming, lawn aeration, eco-friendly, organic fertilizer, neighborhood landscaper"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
-    
 
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
@@ -26,20 +39,21 @@
       crossorigin="anonymous"
     ></script>
 
-    <title> Green Thumb Landscaping</title>
+    <title>Green Thumb Landscaping</title>
   </head>
   <body>
     <header>
-      <nav>
+      <nav aria-label="Main navigation">
         <div class="row">
-          <div class="logo"> Green Thumb Landscaping</div>
-          <div class="logo-black"> Green Thumb Landscaping</div>
+          <div class="logo">Green Thumb Landscaping</div>
+          <div class="logo-black">Green Thumb Landscaping</div>
           <ul class="main-nav js--main-nav">
             <li><a href="#about-us">About us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#specials">Services</a></li>
+            <li><a href="#form">Contact</a></li>
           </ul>
-          <a class="mobile-nav-icon js--nav-icon"
-            ><i class="fas fa-bars"></i
+          <a class="mobile-nav-icon js--nav-icon" role="button" aria-label="Toggle mobile menu" aria-expanded="false"
+            ><i class="fas fa-bars" aria-hidden="true"></i
           ></a>
         </div>
       </nav>
@@ -269,10 +283,15 @@
     <section class="section-form js--section-contact" id="form">
       <div class="row">
         <h2>We're happy to hear from you!</h2>
+        <p class="section-form-intro">
+          Call us at <a href="tel:+15551234567">(555) 123-4567</a> or fill out
+          the form below and we'll get back to you within one business day.
+        </p>
       </div>
 
       <div id="contact" class="row">
-        <form class="contact-form">
+        <div id="form-messages" class="form-messages" role="alert" aria-live="polite"></div>
+        <form class="contact-form" novalidate>
           <div class="row">
             <div class="col span-1-of-3">
               <label for="name">Name</label>
@@ -331,11 +350,12 @@
           </div>
           <div class="row">
             <div class="col span-1-of-3">
-              <label>Message</label>
+              <label for="message">Message</label>
             </div>
             <div class="col span-2-of-3">
               <textarea
                 name="message"
+                id="message"
                 placeholder="Your message here"
               ></textarea>
             </div>
@@ -346,7 +366,7 @@
               <label>&nbsp;</label>
             </div>
             <div class="col span-2-of-3">
-              <input type="submit" value="Send it!" href="#" />
+              <input type="submit" value="Send it!" />
             </div>
           </div>
         </form>
@@ -357,37 +377,38 @@
       <div class="row">
         <div class="col span-1-of-2">
           <ul class="footer-nav">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">iOS App</a></li>
-            <li><a href="#">Android App</a></li>
+            <li><a href="#about-us">About us</a></li>
+            <li><a href="#specials">Services</a></li>
+            <li><a href="#form">Contact</a></li>
           </ul>
         </div>
 
         <div class="col span-1-of-2">
           <ul class="social-links">
             <li>
-              <a href="#"
+              <a href="#" aria-label="Facebook"
                 ><ion-icon
                   name="logo-facebook"
                   class="footer-icon facebook-icon"
+                  aria-hidden="true"
                 ></ion-icon
               ></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" aria-label="Twitter"
                 ><ion-icon
                   name="logo-twitter"
                   class="footer-icon twitter-icon"
+                  aria-hidden="true"
                 ></ion-icon
               ></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" aria-label="Instagram"
                 ><ion-icon
                   name="logo-instagram"
                   class="footer-icon instagram-icon"
+                  aria-hidden="true"
                 ></ion-icon
               ></a>
             </li>
@@ -400,6 +421,10 @@
         </p>
       </div>
     </footer>
+
+    <a href="#" class="back-to-top js--back-to-top" aria-label="Back to top">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </a>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
